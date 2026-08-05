@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Bimmer ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#000,#1a001a,#330033);
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+overflow:hidden;
+}
+
+.card{
+width:90%;
+max-width:420px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+border-radius:20px;
+padding:20px;
+text-align:center;
+box-shadow:0 0 20px rgba(255,105,180,.4);
+}
+
+img{
+width:100%;
+border-radius:20px;
+margin-bottom:20px;
+}
+
+h1{
+color:#ff8fc4;
+margin-bottom:10px;
+}
+
+p{
+line-height:1.7;
+margin-bottom:20px;
+}
+
+button{
+padding:14px 30px;
+border:none;
+border-radius:30px;
+background:#ff4d94;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+#letter{
+display:none;
+margin-top:20px;
+font-size:17px;
+line-height:1.8;
+color:#ffd6e7;
+}
+
+.heart{
+position:absolute;
+font-size:22px;
+animation:fall 8s linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100vh);
+opacity:1;
+}
+100%{
+transform:translateY(100vh);
+opacity:0;
+}
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+
+<img src="bimmer.jpg">
+
+<h1>🎂 Happy Birthday Bimmer ❤️</h1>
+
+<p>
+Today is all about celebrating the most beautiful soul I've ever known.
+</p>
+
+<button onclick="showLetter()">
+Open My Heart ❤️
+</button>
+
+<div id="letter">
+
+Happy Birthday My Love ❤️<br><br>
+
+You are the reason behind my smile.
+Every moment with you is special.
+I pray your life is always filled with happiness,
+success and endless smiles.
+
+Thank you for being part of my life.
+
+I Love You Forever. ❤️
+
+</div>
+
+</div>
+
+<script>
+
+function showLetter(){
+document.getElementById("letter").style.display="block";
+}
+
+for(let i=0;i<30;i++){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="💖";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(5+Math.random()*5)+"s";
+
+heart.style.fontSize=(20+Math.random()*20)+"px";
+
+document.body.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
